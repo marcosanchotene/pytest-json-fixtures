@@ -1,0 +1,10 @@
+site_name: pytest-json-fixtures
+site_description: JSON output for the --fixtures flag
+site_author: Marco Sanchotene
+
+theme: readthedocs
+
+repo_url: https://github.com/marcosanchotene/pytest-json-fixtures
+
+pages:
+- Home: index.md
