@@ -43,7 +43,6 @@ You can install "pytest-json-fixtures" via `pip`_ from `PyPI`_::
 
 Usage
 -----
-.. code:: bash
    $ pytest --json-fixtures
 
 Contributing
