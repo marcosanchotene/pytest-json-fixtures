@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-json-fixtures',
-    version='0.1.1',
+    version='0.1.2',
     author='Marco Sanchotene',
     author_email='marco.sanchotene@outlook.com',
     maintainer='Marco Sanchotene',
