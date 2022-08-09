@@ -10,11 +10,7 @@ pytest-json-fixtures
     :target: https://pypi.org/project/pytest-json-fixtures
     :alt: Python versions
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/marcosanchotene/pytest-json-fixtures?branch=master
-    :target: https://ci.appveyor.com/project/marcosanchotene/pytest-json-fixtures/branch/master
-    :alt: See Build Status on AppVeyor
-
-JSON output for the --fixtures flag
+JSON output for the ``--fixtures`` flag
 
 ----
 
@@ -24,13 +20,13 @@ This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`
 Features
 --------
 
-* TODO
+This plugin takes the output generated when running ``pytest`` with the ``--fixtures`` flag, convert it into JSON format and stream it into a file.
 
 
 Requirements
 ------------
 
-* TODO
+You must have Python, pip and pytest to use this plugin.
 
 
 Installation
@@ -43,12 +39,20 @@ You can install "pytest-json-fixtures" via `pip`_ from `PyPI`_::
 
 Usage
 -----
-   $ pytest --json-fixtures
+
+Run the command below::
+
+    $ pytest --json-fixtures
+
+The same result you would get with ``pytest --fixtures`` will be output in JSON in a ``fixtures.json`` file, the default file name.
+
+If you want the output on a different file, just add it after the flag::
+
+    $ pytest --json-fixtures output.json
 
 Contributing
 ------------
-Contributions are very welcome. Tests can be run with `tox`_, please ensure
-the coverage at least stays the same before you submit a pull request.
+Contributions are very welcome.
 
 License
 -------

@@ -13,11 +13,11 @@ def read(fname):
 
 setup(
     name='pytest-json-fixtures',
-    version='0.1.0',
+    version='0.1.1',
     author='Marco Sanchotene',
-    author_email='marco.sanchotene@gmail.com',
+    author_email='marco.sanchotene@outlook.com',
     maintainer='Marco Sanchotene',
-    maintainer_email='marco.sanchotene@gmail.com',
+    maintainer_email='marco.sanchotene@outlook.com',
     license='MIT',
     url='https://github.com/marcosanchotene/pytest-json-fixtures',
     description='JSON output for the --fixtures flag',
