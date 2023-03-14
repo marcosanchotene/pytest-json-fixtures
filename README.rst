@@ -20,7 +20,7 @@ This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`
 Features
 --------
 
-This plugin takes the output generated when running ``pytest`` with the ``--fixtures`` flag, convert it into JSON format and stream it into a file.
+This plugin converts into JSON format the output generated when running ``pytest`` with the ``--fixtures`` flag.
 
 
 Requirements
@@ -44,11 +44,7 @@ Run the command below::
 
     $ pytest --json-fixtures
 
-The same result you would get with ``pytest --fixtures`` will be output in JSON in a ``fixtures.json`` file, the default file name.
-
-If you want the output on a different file, just add it after the flag::
-
-    $ pytest --json-fixtures output.json
+The same result you would get with ``pytest --fixtures`` will be output in JSON.
 
 Contributing
 ------------
