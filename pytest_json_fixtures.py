@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import inspect
 import json
+import sys
 from pathlib import Path
 from typing import Set, Tuple
 
@@ -13,17 +14,17 @@ def pytest_addoption(parser):
     group = parser.getgroup('json-fixtures')
     group.addoption(
         '--json-fixtures',
-        action='store',
-        dest='filename',
-        default='fixtures.json',
+        action='store_true',
+        dest='json-fixtures',
+        default=False,
         help='JSON output for the --fixtures flag.'
     )
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_collection_modifyitems(session, config):
-    filename = config.getoption("filename")
-    if filename:
+def pytest_collection_modifyitems(session, config, items):
+    if config.getoption("json-fixtures"):
+        items.clear()
         curdir = Path.cwd()
         verbose = config.getvalue("verbose")
         seen: Set[Tuple[str, str]] = set()
@@ -77,10 +78,9 @@ def pytest_collection_modifyitems(session, config):
             else:
                 fixtures.append(fixture)
 
-        with open(filename, "w") as file:
-            json.dump(fixtures, file, sort_keys=True, indent=4)
+        json.dump(fixtures, sys.stdout, sort_keys=True, indent=4)
 
-        outcome = yield
+    outcome = yield
 
 
 def write_docstring(fixture, doc):
